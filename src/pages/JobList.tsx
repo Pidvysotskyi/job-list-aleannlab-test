@@ -16,6 +16,7 @@ type JobListProps = {
     salary: string;
     title: string;
     updatedAt: string;
+    isFavorite: boolean;
   }[];
 };
 

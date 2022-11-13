@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaBeer } from "react-icons/fa";
 
 type JobListItemProps = {
   jobDetails: {
@@ -17,6 +18,7 @@ type JobListItemProps = {
     salary: string;
     title: string;
     updatedAt: string;
+    isFavorite: boolean;
   };
   key: React.Key;
 };
@@ -40,6 +42,7 @@ const JobListItem = (props: JobListItemProps) => {
         <p>{props.jobDetails.salary}</p>
         <p>{props.jobDetails.title}</p>
         <p>{props.jobDetails.updatedAt}</p>
+        {!props.jobDetails.isFavorite && <FaBeer />}
       </NavLink>
     </li>
   );
